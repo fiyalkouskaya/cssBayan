@@ -1,0 +1,36 @@
+html {
+    scroll-behavior: smooth; 
+    background-color: white;
+    }
+* {
+    box-sizing: border-box;
+    }
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+}
+.accordion {
+    border-top: 1px solid gray;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+  
+.accordion-header {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+}
+  
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+  
+  input[type="checkbox"]:checked + .accordion-header + .accordion-content {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
+}
