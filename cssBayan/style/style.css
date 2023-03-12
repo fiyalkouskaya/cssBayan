@@ -30,10 +30,7 @@ h2 {
 }
 .paw {
     height: 3.5em;
-    transition: all 0.5s ease-in-out;
-}
-.paw:hover {
-    transform: rotate(90deg);
+    transition: all 0.8s ease-in-out;
 }
 .meme-img {
     display: block;
@@ -49,6 +46,7 @@ h2 {
     width: 70%;
     margin: 0 auto;
     margin-bottom: 1em;
+    cursor: pointer;
 }
 .accordion-item {
     border-top: 2px solid gray;
@@ -58,7 +56,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    transition: all 0.5s ease-out;
+    transition: all 0.8s ease-out;
 }
 .accordion-title:hover {
     color: rgb(168, 167, 167);
@@ -74,9 +72,15 @@ h2 {
     align-items: center;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.8s ease-in-out;
 }
 .accordion-checkbox:checked ~ .accordion-content {
+    max-height: 30em;
+}
+.accordion-title:hover ~ label .paw {
+    transform: rotate(90deg);
+}
+.accordion-title:hover ~ .accordion-content {
     max-height: 30em;
 }
 .accordion-checkbox:checked ~ .accordion-title {
@@ -127,6 +131,9 @@ h2 {
     .accordion-title:hover {
         color: initial;
     }
+    .accordion-title:hover ~ .accordion-content {
+        max-height: initial;
+    }
 }
 @media screen and (max-width: 320px) {
     .header {
@@ -155,5 +162,8 @@ h2 {
     }
     .accordion-title:hover {
         color: initial;
+    }
+    .accordion-title:hover ~ .accordion-content {
+        max-height: initial;
     }
 }
