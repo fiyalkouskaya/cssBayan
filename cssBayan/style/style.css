@@ -74,14 +74,14 @@ h2 {
     overflow: hidden;
     transition: all 0.8s ease-in-out;
 }
-.accordion-item:hover ~ .accordion-content {
+.accordion-item:hover .accordion-content {
     max-height: 30em;
 }
-.accordion-item:hover  label .paw {
+.accordion-item:hover > label .paw {
     opacity: 1;
     transform: rotate(90deg);
 }
-.accordion-item:not(:hover)  label .paw {
+.accordion-item:not(:hover) label .paw {
     opacity: 0;
 }
 .accordion-checkbox:checked ~ .accordion-content {
